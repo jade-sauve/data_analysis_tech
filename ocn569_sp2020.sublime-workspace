@@ -1,0 +1,750 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"man",
+				"manualCheck"
+			],
+			[
+				"per1",
+				"per1_min"
+			],
+			[
+				"per",
+				"per1_max"
+			],
+			[
+				"direc",
+				"directory_out"
+			],
+			[
+				"tem",
+				"Temperature"
+			],
+			[
+				"plot",
+				"plotCTD"
+			],
+			[
+				"co",
+				"concat_array"
+			],
+			[
+				"string",
+				"string_2"
+			],
+			[
+				"var_",
+				"var_qf"
+			],
+			[
+				"depth",
+				"depth_temp"
+			],
+			[
+				"lat",
+				"lat_thres"
+			],
+			[
+				"sg",
+				"sigma_temp"
+			],
+			[
+				"lat_S",
+				"lat_s_r"
+			],
+			[
+				"sea",
+				"seaice_r"
+			],
+			[
+				"del",
+				"delta_list"
+			],
+			[
+				"chl_",
+				"chl_lon_h"
+			],
+			[
+				"ch",
+				"chl_lon_h"
+			],
+			[
+				"chl_lo",
+				"chl_lon_h"
+			],
+			[
+				"chl",
+				"chl_lat_h"
+			],
+			[
+				"jul",
+				"juliandate"
+			],
+			[
+				"chl_ch",
+				"chl_chl_h"
+			],
+			[
+				"seaice",
+				"seaice_conc_cdr"
+			],
+			[
+				"A",
+				"Alk_LIAR"
+			],
+			[
+				"pr",
+				"prof_N"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/jadesauve/Dropbox/Notes/Sublime tips.note",
+			"settings":
+			{
+				"buffer_size": 3072,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jadesauve/Dropbox/Notes/Bash tips.note",
+			"settings":
+			{
+				"buffer_size": 1315,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jadesauve/Dropbox/Notes/Python Coding Tips.note",
+			"settings":
+			{
+				"buffer_size": 3417,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jadesauve/Documents/Python/TODO/debugging.todo",
+			"settings":
+			{
+				"buffer_size": 116,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "fourier_transform_plot.py",
+			"settings":
+			{
+				"buffer_size": 3554,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "# file to read and plot temperature spectra"
+			}
+		},
+		{
+			"file": "/Users/jadesauve/Documents/Python/scripts/Training/GIS_training_1.py",
+			"settings":
+			{
+				"buffer_size": 378,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"notes",
+				"Notes: Index"
+			],
+			[
+				"task",
+				"Tasks: New document"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Try/Except"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 150.0,
+		"history":
+		[
+			"a"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jadesauve/Documents/Python/scripts/data_analysis_tech"
+	],
+	"file_history":
+	[
+		"/Users/jadesauve/Documents/Python/scripts/Training/GIS_training_1.py",
+		"/Users/jadesauve/Documents/Python/scripts/data_analysis_tech/test",
+		"/Users/jadesauve/Library/Application Support/Sublime Text 3/Packages/FileHeader/FileHeader.sublime-settings",
+		"/Users/jadesauve/Documents/Python/python_tools/useful_code.py",
+		"/Users/jadesauve/Documents/Python/python_tools/colormap_conv_tool.py",
+		"/Users/jadesauve/Documents/Python/scripts/soccom_zones_profiles_map.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2020 winter/carbon/plot_carbon_vs_period.py",
+		"/Users/jadesauve/Documents/Python/python_tools/tool_box.py",
+		"/Users/jadesauve/Documents/Python/python_tools/utiltools.py",
+		"/Users/jadesauve/Documents/Python/python_tools/toolbox_float.py",
+		"/Users/jadesauve/Documents/Python/scripts/convert_df_to_csv.py",
+		"/Users/jadesauve/Documents/Python/scripts/OcnMmry1_CTD_plot_profiles_newCTDMat.py",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/NewCTDfiles_112619/20191210_ncast.cnv",
+		"/Users/jadesauve/Documents/Python/scripts/OcnMmry1_CTD_QC.py",
+		"/Users/jadesauve/Documents/Python/scripts/BHEAT_model_map_monthly.py",
+		"/Users/jadesauve/Documents/Python/scripts/OcnMmry1_CTD_plot_profiles_cleandata.py",
+		"/Users/jadesauve/Documents/Python/scripts/OcnMmry1_CTD_plot_profiles.py",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/RC0035ctd/20191210_ncast.cnv",
+		"/Users/jadesauve/Documents/Éducation/PhD/TA/OCEAN215/ocn215_Nov12_act_2.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/TA/OCEAN215/data/marine_mammal_species.list.txt",
+		"/Users/jadesauve/Documents/Python/scripts/extent_models_map_regslope_dif_ticks.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/TA/OCEAN215/assignment3_JS.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/TA/OCEAN215/ocn215_Nov14_Solution.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/TA/OCEAN215/ocn215_Nov14_act 1.py",
+		"/Users/jadesauve/Documents/Python/scripts/Float data manipulation/ekman_transport_ASCAT_3.0_SphereSpline.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/TA/OCEAN215/data/ocn215_Nov12_1b.txt",
+		"/Users/jadesauve/Documents/Éducation/PhD/TA/OCEAN215/data/data.8497.204.oc215.txt",
+		"/Users/jadesauve/Documents/Python/scripts/ocn215_lecture1_test.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/TA/OCEAN215/data/film.txt",
+		"/Users/jadesauve/Desktop/A8.dat",
+		"/Users/jadesauve/Desktop/A12.dat",
+		"/Users/jadesauve/Desktop/A13.dat",
+		"/Users/jadesauve/Desktop/A7.dat",
+		"/Users/jadesauve/Desktop/A6.dat",
+		"/Users/jadesauve/Desktop/A5.dat",
+		"/Users/jadesauve/Desktop/A4.dat",
+		"/Users/jadesauve/Desktop/A3.dat",
+		"/Users/jadesauve/Desktop/A2.dat",
+		"/Users/jadesauve/Desktop/A1.dat",
+		"/Users/jadesauve/Desktop/A14.dat",
+		"/Users/jadesauve/Documents/Éducation/PhD/2019 Fall/AMATH581/A12.dat",
+		"/Users/jadesauve/Documents/Éducation/PhD/2019 Fall/AMATH581/A1.dat",
+		"/Users/jadesauve/Documents/Éducation/PhD/2019 Fall/AMATH581/A6.dat",
+		"/Users/jadesauve/Desktop/test.py",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191710_pc6_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191710_pc4_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191710_pc3_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191710_pc2_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191610_rosario_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191610_lummi_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191510_fraiseroutflow_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191410_victoriasill_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191410_victoriaA_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191310_s6_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191310_s4_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191310_s3_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191310_s2_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191210_scast_mod.cnv",
+		"/Users/jadesauve/Coding/data/CTD/ocean_memory_1/CTD/20191210_ncast_mod.cnv",
+		"/Users/jadesauve/Desktop/Flag_of_Canada.svg",
+		"/Users/jadesauve/Coding/data/SOCCOM_data_scriptready/PF.dat",
+		"/Users/jadesauve/Documents/Python/scripts/Float data manipulation/soccom_plot_profiles.py",
+		"/Users/jadesauve/Coding/data/SOCCOM_data_scriptready/seasonal_cycle_floats.dat",
+		"/Users/jadesauve/Documents/Python/scripts/Float data manipulation/month_zone_convert_floatID.py",
+		"/Users/jadesauve/Documents/Python/scripts/Float data manipulation/soccom_time_avg.py",
+		"/Users/jadesauve/Documents/Python/scripts/Float data manipulation/soccom_underML_avg.py",
+		"/Users/jadesauve/Documents/Python/scripts/Float data manipulation/soccom_mld_avg.py",
+		"/Users/jadesauve/Documents/Python/scripts/Float data manipulation/dataFrame_soccom_3_floatDate.py",
+		"/Users/jadesauve/Documents/Python/scripts/Float data manipulation/directory_in_str+'soccom_dataframe_test.pkl",
+		"/Users/jadesauve/Documents/Python/scripts/advDecomp_bar.py",
+		"/Users/jadesauve/Documents/Python/scripts/sea_ice_budget_b.py",
+		"/Users/jadesauve/Documents/Python/scripts/SST_models_zonalAvg.py",
+		"/Users/jadesauve/Documents/Python/scripts/build_mask_ASF.py",
+		"/Users/jadesauve/Documents/Python/scripts/SST_CM2-1_CM2.5_CM2.6_seasonMean_dif_loop.py",
+		"/Users/jadesauve/Documents/Python/scripts/calculate_extent_model.py",
+		"/Users/jadesauve/Documents/Python/scripts/iceThick_models_dif_map_0182-0200.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2019 Spring/GFD II/GFD_hmk_3.py",
+		"/Users/jadesauve/Downloads/ams_phoc42_956.bib",
+		"/Users/jadesauve/Documents/Python/scripts/dataFrame_soccom.py",
+		"/Users/jadesauve/Downloads/citation-223900552.bib",
+		"/Users/jadesauve/Downloads/citation-223367563.bib",
+		"/Users/jadesauve/Downloads/citation-228368784.bib",
+		"/Users/jadesauve/Documents/Python/scripts/chlorophyll_high_finder.py",
+		"/Users/jadesauve/Documents/Python/scripts/eddy_mean_decomp_CD.py",
+		"/Users/jadesauve/Documents/Python/scripts/chlorophyll_high_finde_shack.py",
+		"/Users/jadesauve/Documents/Python/scripts/frozen-budget_model_map_V2.py",
+		"/Users/jadesauve/Documents/Python/scripts/conc_CM2-1_sensitiv_map_season.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2019 Winter/AMATH 568/amath_hmk_6.py",
+		"/Users/jadesauve/Documents/Python/scripts/float_data_consolidation.py",
+		"/Users/jadesauve/Documents/Python/scripts/chlorophyll_location_finder_shack.py",
+		"/Users/jadesauve/Documents/Python/scripts/Float_data_test_1.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2018 Fall/AMATH/lab5_plot.py",
+		"/Users/jadesauve/Documents/Python/scripts/conc_NSIDC_map_season.py",
+		"/Users/jadesauve/Documents/Python/scripts/conc_models_map_avg_Yr22-49_dif.py",
+		"/Users/jadesauve/Documents/Python/scripts/conc_CM2.5_control_map_season.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2018 Fall/AMATH/hmk5_4.py",
+		"/Users/jadesauve/Documents/Python/scripts/binary_file_read.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2019 Winter/AMATH/hmk1.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2018 Fall/Phys ocn/pbset4.py",
+		"/Users/jadesauve/Documents/Python/scripts/iceThick_models_map_0182-0200.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2018 Fall/Chem ocn/problemset3.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2018 Fall/Chem ocn/problemset4c.py",
+		"/Users/jadesauve/Documents/Éducation/PhD/2018 Fall/Phys ocn/problem set 3.py"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"pX",
+			"numpy",
+			"amazon 27"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/jadesauve/Dropbox/Notes/Sublime tips.note",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3072,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3025,
+								3025
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/PlainNotes/Color Schemes/Sticky-Gray.tmTheme",
+							"is_note": true,
+							"syntax": "Packages/PlainNotes/Note.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/jadesauve/Dropbox/Notes/Bash tips.note",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1314,
+								1314
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/PlainNotes/Color Schemes/Sticky-Gray.tmTheme",
+							"is_note": true,
+							"syntax": "Packages/PlainNotes/Note.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/jadesauve/Dropbox/Notes/Python Coding Tips.note",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								295,
+								295
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/PlainNotes/Color Schemes/Sticky-Gray.tmTheme",
+							"is_note": true,
+							"syntax": "Packages/PlainNotes/Note.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/jadesauve/Documents/Python/TODO/debugging.todo",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"plain_tasks_remain_time_phantoms":
+							[
+							],
+							"syntax": "Packages/PlainTasks/PlainTasks.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "fourier_transform_plot.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# file to read and plot temperature spectra",
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								2,
+								15,
+								46,
+								24,
+								0,
+								189,
+								70,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/jadesauve/Documents/Python/scripts/Training/GIS_training_1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								2,
+								15,
+								55,
+								4,
+								11,
+								121,
+								63,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.138743966719,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ocn569_sp2020.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"colorm",
+				"~/Documents/Python/python_tools/colormap_conv_tool.py"
+			],
+			[
+				"to",
+				"~/Documents/Python/python_tools/colormap_conv_tool.py"
+			],
+			[
+				"p",
+				"~/Documents/Éducation/PhD/2020 winter/carbon/plot_carbon_vs_period.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
