@@ -156,7 +156,6 @@ inter_T, T_anom, time_days_T, T_avg = ds_to_1Darr('Temperature',ds)
 inter_s, s_anom, time_days_s, s_avg = ds_to_1Darr('Salinity',ds)
 #inter_ml, mlp_anom, time_days_ml, mlp_avg = ds_to_1Darr('mlp',ds)
 
-
 # compute spectrum
 freq, fourier_amp, __, spec, __, w, fourier_combined = spectrum(o2_anom)
 freq2, fourier_amp2, __, spec2, __, w2, fourier_combined2 = spectrum(o2_anom[:149])

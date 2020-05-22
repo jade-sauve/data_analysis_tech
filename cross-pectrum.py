@@ -161,8 +161,8 @@ o2_anom_cut = o2_anom[:149]
 freq,__,__,__,__,w,__ = spectrum(o2_anom)
 freq_cut,__,__,__,__,w_cut,__ = spectrum(o2_anom_cut)
 
-cospec_amp_oc ,cross_spec_oc, coherence_sq_oc,*rest,cross_phase_combined_oc,coherence_sq_combined_oc = cospec_coher(o2_anom_cut,dic_anom,freq_cut) 
-cospec_amp_ot ,cross_spec_ot, coherence_sq_ot,*rest,cross_phase_combined_ot,coherence_sq_combined_ot = cospec_coher(o2_anom,T_anom,freq) 
+cospec_amp_oc ,cross_spec_oc, coherence_sq_oc,cross_phase_oc,*rest,cross_phase_combined_oc,coherence_sq_combined_oc = cospec_coher(o2_anom_cut,dic_anom,freq_cut) 
+cospec_amp_ot ,cross_spec_ot, coherence_sq_ot,cross_phase_ot,*rest,cross_phase_combined_ot,coherence_sq_combined_ot = cospec_coher(o2_anom,T_anom,freq) 
 
 
 # plot coherence
@@ -206,7 +206,7 @@ plt.show()
 
 fig3 = plt.figure(figsize=(14,7))
 plt.semilogx(freq,coherence_sq_ot,c='teal',alpha=0.5,lw=0.5,label='Original')
-plt.semilogx(coherence_sq_combined.rolling(center=True,window=11,min_periods=3).mean(),c='teal',lw=1.5,label='Band-averaged over 11 bands')
+plt.semilogx(coherence_sq_combined_ot.rolling(center=True,window=11,min_periods=3).mean(),c='teal',lw=1.5,label='Band-averaged over 11 bands')
 plt.legend()
 # plt.semilogx(*signal.coherence(T,S),c='r',lw=1)  # SciPy version
 plt.xlabel('$\omega$ (radians/day)',fontsize=15)
@@ -218,22 +218,22 @@ plt.title('Squared coherence of Temperature and Dissolved Oxygen',fontsize=15) #
 plt.show()
 
 fig4 = plt.figure(figsize=(14,7))
-cross_phase[cross_phase < 0] += 360   # shift from (-180,180) to (0,360)
-plt.semilogx(freq,cross_phase,c='orange',alpha=0.5,lw=0.5,label='Original')
+cross_phase_ot[cross_phase_ot < 0] += 360   # shift from (-180,180) to (0,360)
+plt.semilogx(freq,cross_phase_ot,c='orange',alpha=0.5,lw=0.5,label='Original')
 # note: band-averaging when result is in degrees from -180 to 180 requires special formula for averaging circular quantities:
 #       https://en.wikipedia.org/wiki/Mean_of_circular_quantities#Mean_of_angles
-rolling_intermediate_imag = exp(cross_phase_combined * 1j).apply(imag).rolling(center=True,window=11,min_periods=3).sum()
-rolling_intermediate_real = exp(cross_phase_combined * 1j).apply(real).rolling(center=True,window=11,min_periods=3).sum()
+rolling_intermediate_imag = exp(cross_phase_combined_ot * 1j).apply(imag).rolling(center=True,window=11,min_periods=3).sum()
+rolling_intermediate_real = exp(cross_phase_combined_ot * 1j).apply(real).rolling(center=True,window=11,min_periods=3).sum()
 rolling_cross_phase_averaged_properly = (180/pi)*arctan2(rolling_intermediate_imag,rolling_intermediate_real)
 rolling_cross_phase_averaged_properly[rolling_cross_phase_averaged_properly < 0] += 360      # shift from (-180,180) to (0,360)
 plt.semilogx(rolling_intermediate_imag.index,rolling_cross_phase_averaged_properly,c='orange',lw=1.5,label='Band-averaged over 11 bands')
 plt.legend()
 plt.xlabel('$\omega$ (radians/day)',fontsize=15)
-plt.ylabel('Phase between $\S-O2$ (degrees)',fontsize=15) #m
+plt.ylabel('Phase between $T-O2$ (degrees)',fontsize=15) #m
 plt.xlim([min(freq[1:]),max(freq)])
 plt.ylim([0,360])
 plt.grid()
-plt.title('Phase for Oxygen and Salinity',fontsize=15); #m
+plt.title('Phase for Oxygen and Temperature',fontsize=15); #m
 
 
 
@@ -289,136 +289,136 @@ cospec_amp_t ,cross_spec_t, coherence_sq_t,*rest_t,cross_phase_combined_t,cohere
 
 # begin plotting the spectrum
 
-freq1 = 0.01685
-T1 = 1/(freq1/(2*pi))
+# freq1 = 0.01685
+# T1 = 1/(freq1/(2*pi))
 
-fig1=plt.figure(figsize=(7,7))
+# fig1=plt.figure(figsize=(7,7))
 
-max_y = 20
-min_y = 2e-3 
+# max_y = 20
+# min_y = 2e-3 
 
-plt.loglog(freq,cospec_amp,color='purple')
+# plt.loglog(freq,cospec_amp,color='purple')
 
-plt.plot([omega_max,omega_max],[min_y,max_y],'--k')
-plt.text(omega_max-0.1,min_y+(min_y),'$\omega_{max}$',fontsize=12,color='firebrick')
+# plt.plot([omega_max,omega_max],[min_y,max_y],'--k')
+# plt.text(omega_max-0.1,min_y+(min_y),'$\omega_{max}$',fontsize=12,color='firebrick')
 
-plt.plot([omega0,omega0],[min_y,max_y],'--k',zorder=10)
-plt.text(omega0+0.0001,min_y+(min_y*2),'$\omega_o$',fontsize=15,color='blue')
+# plt.plot([omega0,omega0],[min_y,max_y],'--k',zorder=10)
+# plt.text(omega0+0.0001,min_y+(min_y*2),'$\omega_o$',fontsize=15,color='blue')
 
-#plt.text(0.01,2*min_y,'n_av = '+str(n_av))
-if plotfeat == 'peak':
-    plt.text(freq1,min_y+(min_y*2),' '+str(round(T1,2))+' days',color='blue')
-    plt.plot([freq1,freq1],[min_y,max_y],'--k',zorder=10)
-elif plotfeat == 'an':
-    freq_an = 2*pi*(1/365.25)
-    plt.text(freq_an,min_y+(min_y*2),' Annual',color='blue')
-    plt.plot([freq_an,freq_an],[min_y,max_y],'--k',zorder=10)
+# #plt.text(0.01,2*min_y,'n_av = '+str(n_av))
+# if plotfeat == 'peak':
+#     plt.text(freq1,min_y+(min_y*2),' '+str(round(T1,2))+' days',color='blue')
+#     plt.plot([freq1,freq1],[min_y,max_y],'--k',zorder=10)
+# elif plotfeat == 'an':
+#     freq_an = 2*pi*(1/365.25)
+#     plt.text(freq_an,min_y+(min_y*2),' Annual',color='blue')
+#     plt.plot([freq_an,freq_an],[min_y,max_y],'--k',zorder=10)
 
-    freq_semAn = 2*pi*(2/365.25)
-    plt.text(freq_semAn,min_y+(min_y*2),' Semi-Annual',color='blue')
-    plt.plot([freq_semAn,freq_semAn],[min_y,max_y],'--k',zorder=10)
-else:
-    print('Choice for plotfeat is not valid.')
+#     freq_semAn = 2*pi*(2/365.25)
+#     plt.text(freq_semAn,min_y+(min_y*2),' Semi-Annual',color='blue')
+#     plt.plot([freq_semAn,freq_semAn],[min_y,max_y],'--k',zorder=10)
+# else:
+#     print('Choice for plotfeat is not valid.')
 
-plt.xlabel('$\omega$ (radians/day)',fontsize=15,ha='center')
-plt.ylabel(' (($\mu$mol/kg)($\mu$mol/kg)/RPD)',fontsize=15)
-plt.ylim(min_y,max_y)
-plt.grid(which='both')
+# plt.xlabel('$\omega$ (radians/day)',fontsize=15,ha='center')
+# plt.ylabel(' (($\mu$mol/kg)($\mu$mol/kg)/RPD)',fontsize=15)
+# plt.ylim(min_y,max_y)
+# plt.grid(which='both')
 
-plt.title('Oxygen and DIC cross-spectrum, sampling = '+srate+', '+dataw)
+# plt.title('Oxygen and DIC cross-spectrum, sampling = '+srate+', '+dataw)
 
-plt.show()
-
-
-# begin plotting the coherence and phase
-#
-# first the coherence
-#
-fig1=plt.figure(figsize=(9,7))
-
-max_y = 1.5
-min_y = 0.5
-
-plt.semilogx(freq_av,coh_sq,color='purple')
-
-plt.plot([omega_max,omega_max],[min_y,max_y],'--k')
-plt.text(omega_max-0.1,0.6,'$\omega_{max}$',fontsize=12,color='firebrick')
-
-#plt.text(1.2,0.88,'n_av = 21')
-
-plt.xlabel('$\omega$ (radians/day)',fontsize=15,ha='center')
-plt.ylabel('Squared Coherence $\it{O2}$-$\it{DIC}$',fontsize=15)
-plt.grid(which='both')
-plt.title('Oxygen and DIC Coherence, sampling = '+srate+', '+dataw)
-plt.ylim(min_y,max_y)
-
-plt.show()
+# plt.show()
 
 
-#
-# now the phase
-#
-fig2=plt.figure(figsize=(9,7))
+# # begin plotting the coherence and phase
+# #
+# # first the coherence
+# #
+# fig1=plt.figure(figsize=(9,7))
 
-max_y = -180.
-min_y = 180. 
+# max_y = 1.5
+# min_y = 0.5
 
-plt.semilogx(freq_av,cospec_phase,color='orange')
+# plt.semilogx(freq_av,coh_sq,color='purple')
 
-plt.plot([omega_max,omega_max],[min_y,max_y],'--k')
-plt.text(omega_max-0.1,min_y+10,'$\omega_{max}$',fontsize=12,color='firebrick')
+# plt.plot([omega_max,omega_max],[min_y,max_y],'--k')
+# plt.text(omega_max-0.1,0.6,'$\omega_{max}$',fontsize=12,color='firebrick')
 
-plt.text(1.2,130.,'n_av = 21')
+# #plt.text(1.2,0.88,'n_av = 21')
 
-plt.xlabel('$\omega$ (radians/day)',fontsize=15,ha='center')
-plt.ylabel('Phase $\it{O2}$-$\it{DIC}$, degrees',fontsize=15)
-plt.ylim(min_y,max_y)
-plt.grid(which='both')
-plt.title('Oxygen and DIC Phase, sampling = '+srate+', '+dataw)
+# plt.xlabel('$\omega$ (radians/day)',fontsize=15,ha='center')
+# plt.ylabel('Squared Coherence $\it{O2}$-$\it{DIC}$',fontsize=15)
+# plt.grid(which='both')
+# plt.title('Oxygen and DIC Coherence, sampling = '+srate+', '+dataw)
+# plt.ylim(min_y,max_y)
 
-plt.show()
-
-
-# spectrum of dic
+# plt.show()
 
 
-zz=np.fft.rfft(dic_2,n=nn)/nn
-fourier_amp=np.sqrt((np.real(zz)**2+np.imag(zz)**2))
-fourier_phase=180.*np.arctan2(np.imag(zz),np.real(zz))/pi
-spec=np.real(zz*np.conj(zz))/(2.*pi*nn*dt)
-spec_amp=(np.absolute(zz))**2/(2.*pi*nn*dt)
+# #
+# # now the phase
+# #
+# fig2=plt.figure(figsize=(9,7))
+
+# max_y = -180.
+# min_y = 180. 
+
+# plt.semilogx(freq_av,cospec_phase,color='orange')
+
+# plt.plot([omega_max,omega_max],[min_y,max_y],'--k')
+# plt.text(omega_max-0.1,min_y+10,'$\omega_{max}$',fontsize=12,color='firebrick')
+
+# plt.text(1.2,130.,'n_av = 21')
+
+# plt.xlabel('$\omega$ (radians/day)',fontsize=15,ha='center')
+# plt.ylabel('Phase $\it{O2}$-$\it{DIC}$, degrees',fontsize=15)
+# plt.ylim(min_y,max_y)
+# plt.grid(which='both')
+# plt.title('Oxygen and DIC Phase, sampling = '+srate+', '+dataw)
+
+# plt.show()
 
 
-fig2=plt.figure(figsize=(7,7))
-
-max_y = 2e-3
-min_y = 2.e-7
-
-plt.loglog(freq,spec,color='darkkhaki')
-plt.ylabel('Energy Density ($\mu$mol/kg)$^2$/(radian/day))',fontsize=15)
-
-plt.plot([omega_max,omega_max],[min_y,max_y],'--k')
-plt.text(omega_max-0.14,min_y+(min_y*2),'$\omega_{max}$',fontsize=15,color='blue') #modify
-
-plt.plot([omega0,omega0],[min_y,max_y],'--k',zorder=10)
-plt.text(omega0+0.0001,min_y+(min_y*2),'$\omega_o$',fontsize=15,color='blue')
-
-freq_an = 2*pi*(1/365.25)
-plt.text(freq_an,min_y+(min_y*2),' Annual',color='blue')
-plt.plot([freq_an,freq_an],[min_y,max_y],'--k',zorder=10)
-
-freq_semAn = 2*pi*(2/365.25)
-plt.text(freq_semAn,min_y+(min_y*2),' Semi-Annual',color='blue')
-plt.plot([freq_semAn,freq_semAn],[min_y,max_y],'--k',zorder=10)
+# # spectrum of dic
 
 
-plt.ylim(min_y,max_y)
-plt.xlabel('$\omega$ (radians/day)',fontsize=15,ha='center')
+# zz=np.fft.rfft(dic_2,n=nn)/nn
+# fourier_amp=np.sqrt((np.real(zz)**2+np.imag(zz)**2))
+# fourier_phase=180.*np.arctan2(np.imag(zz),np.real(zz))/pi
+# spec=np.real(zz*np.conj(zz))/(2.*pi*nn*dt)
+# spec_amp=(np.absolute(zz))**2/(2.*pi*nn*dt)
 
-plt.title('DIC, sampling = reg, notrend')
-plt.grid()
-#plt.savefig(path_out2)
-plt.show()
+
+# fig2=plt.figure(figsize=(7,7))
+
+# max_y = 2e-3
+# min_y = 2.e-7
+
+# plt.loglog(freq,spec,color='darkkhaki')
+# plt.ylabel('Energy Density ($\mu$mol/kg)$^2$/(radian/day))',fontsize=15)
+
+# plt.plot([omega_max,omega_max],[min_y,max_y],'--k')
+# plt.text(omega_max-0.14,min_y+(min_y*2),'$\omega_{max}$',fontsize=15,color='blue') #modify
+
+# plt.plot([omega0,omega0],[min_y,max_y],'--k',zorder=10)
+# plt.text(omega0+0.0001,min_y+(min_y*2),'$\omega_o$',fontsize=15,color='blue')
+
+# freq_an = 2*pi*(1/365.25)
+# plt.text(freq_an,min_y+(min_y*2),' Annual',color='blue')
+# plt.plot([freq_an,freq_an],[min_y,max_y],'--k',zorder=10)
+
+# freq_semAn = 2*pi*(2/365.25)
+# plt.text(freq_semAn,min_y+(min_y*2),' Semi-Annual',color='blue')
+# plt.plot([freq_semAn,freq_semAn],[min_y,max_y],'--k',zorder=10)
+
+
+# plt.ylim(min_y,max_y)
+# plt.xlabel('$\omega$ (radians/day)',fontsize=15,ha='center')
+
+# plt.title('DIC, sampling = reg, notrend')
+# plt.grid()
+# #plt.savefig(path_out2)
+# plt.show()
 
 
 #

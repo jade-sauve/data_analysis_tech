@@ -23,15 +23,17 @@ def factors(n):
 #path_current = !pwd # only works in ipython
 path_current = os.path.abspath('.') 
 
-if path_current[0].split('/')[1] == 'Users':   
+if path_current.split('/')[1] == 'Users':   
 	runpath = '/Users/jadesauve/Documents/Python/scripts/data_analysis_tech'
 	toolpath = '/Users/jadesauve/Documents/Python/scripts/python_tools/'
-elif path_current[0].split('/')[1] == 'data1':
+elif path_current.split('/')[1] == 'data1':
 	runpath = '/data1/effcom/jsauve/data_analysis_tech'
 	toolpath = '/data1/effcom/jsauve/python_tools/'
-elif path_current[0].split('/')[1] == 'home':
+elif path_current.split('/')[1] == 'home':
 	runpath = '/data1/effcom/jsauve/data_analysis_tech'
 	toolpath = '/data1/effcom/jsauve/python_tools/'
+else:
+	print('we have an issue with toolpath')
 
 pht = os.path.abspath(toolpath)
 if pht not in sys.path:
@@ -45,7 +47,7 @@ from toolbox_cmdline import *
 
 # create the parser object
 parser = argparse.ArgumentParser()
-parser.add_argument('-m', '--m_int', default=10, type=str)
+parser.add_argument('-m', '--m_int', default=10, type=int)
 parser.add_argument('-n', '--n_int', default=12, type=int)
 
 # get the arguments
@@ -53,6 +55,7 @@ args = parser.parse_args()
 
 m = args.m_int
 n = args.n_int
+print('For the numpy functions to work, n needs to be 12')
 
 # select the right factors to make an array with more than 1D
 fac = factors(n)
@@ -97,11 +100,11 @@ arr2_flat = arr2.flatten()
 
 # create directory
 # if we are in the correct folder
-if path_current[0] == runpath:
+if path_current == runpath:
 	make_dir('numpy_argparse_output')
 
 # write the array to a pickle file
-out_fn = path_current[0]+'/numpy_argparse_output/' + 'pickled_array.pkl'
+out_fn = path_current+'/numpy_argparse_output/' + 'pickled_array.pkl'
 pickle.dump(arr2, open(out_fn, 'wb')) # 'wb' is for write binary
 
 # read the pickle file 
